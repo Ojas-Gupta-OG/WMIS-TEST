@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Assessment Submitted | Welfare Mission International School</title>
+  <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+
+  <!-- Interactive 3D Physics Mesh Background -->
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <img src="assets/School-logo.jpg" alt="School Logo" width="46" height="46">
+      <span>Welfare Mission International School</span>
+    </a>
+    <span class="header-note">Digital Examination System</span>
+  </header>
+
+  <main class="narrow page-main">
+    <section class="card submitted-card">
+      <div class="check-mark" aria-hidden="true">✓</div>
+      <p class="eyebrow">Submission Success</p>
+      <h1>Exam Completed</h1>
+      <div id="result" class="muted result-message">Your answers have been securely recorded into the institution's evaluation database.</div>
+      <p><button class="full-button" id="done" type="button">Exit</button></p>
+    </section>
+  </main>
+
+  <script src="js/bg-3d.js"></script>
+  <script type="module" src="js/result.js"></script>
+</body>
+</html>
