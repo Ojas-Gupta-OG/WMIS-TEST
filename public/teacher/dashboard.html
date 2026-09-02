@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Faculty Dashboard | Welfare Mission International School</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/teacher.css">
+</head>
+<body class="teacher-area">
+
+<!-- Interactive 3D Physics Mesh Background -->
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+<div class="teacher-shell">
+
+<aside class="teacher-sidebar">
+  <div class="teacher-brand">
+    <img src="../assets/School-logo.jpg" alt="School Logo">
+    <div><strong>Welfare Mission</strong><small>Faculty Portal</small></div>
+  </div>
+  <nav class="teacher-nav" aria-label="Teacher navigation">
+    <a class="active" href="dashboard.html"><span class="nav-dot"></span>Dashboard</a>
+    <a class="" href="create-test.html"><span class="nav-dot"></span>Create Test</a>
+    <a href="../index.html"><span class="nav-dot"></span>Home</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <a class="nav-link" href="#" id="logout"><span>🚪</span> Sign out</a>
+  </div>
+</aside>
+
+<div class="teacher-main">
+<header class="teacher-topbar">
+  <div class="topbar-title"><strong>Faculty/Teacher Panel</strong><small>Welfare Mission International School</small></div>
+  
+</header>
+
+<main class="teacher-content">
+<section class="page-intro">
+  <div>
+    
+    <h1>Examination Sessions</h1>
+    <p>Create Tests & questions, monitor active test, and view results.</p>
+  </div>
+  <div class="teacher-actions">
+    <a class="button" href="create-test.html">+ Create Test Session</a>
+  </div>
+</section>
+
+<div class="stats-grid" id="stats"></div>
+
+<section class="panel">
+  <div class="panel-heading">
+    <div>
+      <h2>All Examination Sessions</h2>
+      <p>All Assessments and Active Tests were visible here createed by Teachers.</p>
+    </div>
+   
+  </div>
+  <div class="teacher-table-wrap">
+    <table class="teacher-table">
+      <thead>
+        <tr>
+          <th>Assessment</th>
+          <th>Class & Section</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="tests"></tbody>
+    </table>
+  </div>
+</section>
+</main>
+</div>
+</div>
+
+<script src="../js/bg-3d.js"></script>
+<script type="module" src="../js/teacher.js"></script>
+</body>
+</html>

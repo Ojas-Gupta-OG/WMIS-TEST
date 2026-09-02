@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Faculty Portal | Welfare Mission International School</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/teacher.css">
+</head>
+<body class="teacher-area">
+
+<!-- Interactive 3D Physics Mesh Background -->
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+<main class="login-page">
+  <section class="login-box">
+    <div class="login-head">
+      <img src="../assets/School-logo.jpg" alt="School Logo">
+      <h1>Faculty Workspace</h1>
+      <p>Authorized administrator and teacher examination console.</p>
+    </div>
+    <form id="login" class="login-form">
+      <label>Institutional Email Address
+        <input type="email" name="email" autocomplete="username" placeholder="teacher@wmis.edu" required>
+      </label>
+      <label>Password
+        <input type="password" name="password" autocomplete="current-password" placeholder="••••••••" required>
+      </label>
+      <button type="submit">Authenticate & Sign In</button>
+      <p id="err" class="notice hidden"></p>
+    </form>
+    <div class="login-foot">Authorized school personnel only • Welfare Mission International School</div>
+  </section>
+</main>
+
+<script src="../js/bg-3d.js"></script>
+<script type="module" src="../js/teacher-login-redirect.js"></script>
+<script type="module" src="../js/teacher.js"></script>
+</body>
+</html>

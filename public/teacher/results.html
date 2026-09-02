@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Assessment Results | Welfare Mission International School</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/teacher.css">
+</head>
+<body class="teacher-area">
+
+<!-- Interactive 3D Physics Mesh Background -->
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+<div class="teacher-shell">
+
+<aside class="teacher-sidebar">
+  <div class="teacher-brand">
+    <img src="../assets/School-logo.jpg" alt="School Logo">
+    <div><strong>Welfare Mission</strong><small>Faculty Portal</small></div>
+  </div>
+  <nav class="teacher-nav" aria-label="Teacher navigation">
+    <a class="active" href="dashboard.html"><span class="nav-dot"></span>Dashboard</a>
+    <a class="" href="create-test.html"><span class="nav-dot"></span>Create Test</a>
+    <a href="../index.html"><span class="nav-dot"></span>Home</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <a class="nav-link" href="#" id="logout"><span>🚪</span> Sign out</a>
+  </div>
+</aside>
+
+<div class="teacher-main">
+<header class="teacher-topbar">
+  <div class="topbar-title"><strong>View Results</strong><small>View Results of your session Test.</small></div>
+  <span class="muted" style="font-size: 13.5px; font-weight: 700;">Candidate Submissions</span>
+</header>
+
+<main class="teacher-content">
+<section class="page-intro">
+  <div>
+    <span class="eyebrow"></span>
+    <h1></h1>
+    <p></p>
+  </div>
+  <div class="teacher-actions">
+    <a class="button secondary" href="dashboard.html">← Back to Dashboard</a>
+    <button id="csv" type="button">📥 Export CSV Spreadsheet</button>
+  </div>
+</section>
+
+<section class="panel">
+  <div class="panel-heading">
+    <div>
+      <h2>Result Records</h2>
+      <p>Student Submissions with their total marks and right and wrong question along with percentage.</p>
+    </div>
+  </div>
+  <div class="teacher-table-wrap">
+    <table class="teacher-table">
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Class</th>
+          <th>Section</th>
+          <th>Terminal</th>
+          <th>Correct</th>
+          <th>Incorrect</th>
+          <th>Skipped</th>
+          <th>Total Score</th>
+          <th>Percentage</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+</section>
+</main>
+</div>
+</div>
+
+<script src="../js/bg-3d.js"></script>
+<script type="module" src="../js/teacher.js"></script>
+</body>
+</html>

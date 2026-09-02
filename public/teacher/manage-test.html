@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Manage Assessment | Welfare Mission International School</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/teacher.css">
+</head>
+<body class="teacher-area">
+
+<!-- Interactive 3D Physics Mesh Background -->
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+
+<div class="teacher-shell">
+
+<aside class="teacher-sidebar">
+  <div class="teacher-brand">
+    <img src="../assets/School-logo.jpg" alt="School Logo">
+    <div><strong>Welfare Mission</strong><small>Faculty Portal</small></div>
+  </div>
+  <nav class="teacher-nav" aria-label="Teacher navigation">
+    <a class="active" href="dashboard.html"><span class="nav-dot"></span>Dashboard</a>
+    <a class="" href="create-test.html"><span class="nav-dot"></span>Create Test</a>
+    <a href="../index.html"><span class="nav-dot"></span>Home</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <a class="nav-link" href="#" id="logout"><span>🚪</span> Sign out</a>
+  </div>
+</aside>
+
+<div class="teacher-main">
+<header class="teacher-topbar">
+  <div class="topbar-title"><strong>Manage You Assessments</strong><small>Make Your Test Active, Unactive and  create questions</small></div>
+  
+</header>
+
+<main class="teacher-content">
+<section class="page-intro">
+  <div>
+    
+    <h1 id="name">Loading assessment details…</h1>
+    <p id="meta" style="font-weight: 700; margin-top: 6px; color: rgba(255, 255, 255, 0.95);"></p>
+  </div>
+  <div class="teacher-actions">
+    <a class="button secondary" href="dashboard.html">← Dashboard</a>
+    <a id="results" class="button" href="#">Submissions & Results →</a>
+  </div>
+</section>
+
+<section class="panel" style="margin-bottom: 28px;">
+  <div class="panel-heading">
+    <div>
+      <h2>Control Your Test Status</h2>
+      <p>Make the Test Active and Unactive by Choosing adjacent buttons.</p>
+    </div>
+    <div class="teacher-actions">
+      <button id="activate" type="button"> Activate Test</button>
+      <button id="complete" class="secondary" type="button">Stop Test</button>
+    </div>
+  </div>
+</section>
+
+<section class="form-section">
+  <h2> Import  Question</h2>
+  <p class="section-help">Upload questions via spreadsheet or text file. Formats supported: Excel (.xlsx, .xls), CSV, TSV, TXT or JSON.</p>
+  <div class="import-box">
+    <input id="importQuestions" type="file" accept=".xlsx,.xls,.csv,.tsv,.txt,.json">
+    <span class="muted" style="font-size: 13px;">Schema: Question, OptionA, OptionB, OptionC, OptionD, CorrectAnswer, Marks, Explanation</span>
+  </div>
+</section>
+
+<section class="form-section">
+  <h2>Add Multiple Choice Question (MCQ)</h2>
+  <p class="section-help">Add individual questions with custom point values and detailed step-by-step explanations.</p>
+  <form id="question">
+    <label>Question Text
+      <textarea name="text" placeholder="Enter the complete question prompt..." required></textarea>
+    </label>
+    <div class="form-grid">
+      <label>Option A
+        <input name="A" placeholder="Answer option A" required>
+      </label>
+      <label>Option B
+        <input name="B" placeholder="Answer option B" required>
+      </label>
+      <label>Option C
+        <input name="C" placeholder="Answer option C" required>
+      </label>
+      <label>Option D
+        <input name="D" placeholder="Answer option D" required>
+      </label>
+      <label>Correct Answer Key
+        <select name="correctAnswer">
+          <option>A</option>
+          <option>B</option>
+          <option>C</option>
+          <option>D</option>
+        </select>
+      </label>
+      <label>Awarded Marks
+        <input name="marks" type="number" min="0" value="1" required>
+      </label>
+     
+    </div>
+    <div style="margin-top: 22px;">
+      <button type="submit">+ Add Question</button>
+    </div>
+  </form>
+</section>
+
+<section class="panel">
+  <div class="panel-heading">
+    <div>
+      <h2>Present Questions</h2>
+      <p>Questions currently active for this assessment session.</p>
+    </div>
+  </div>
+  <div class="panel-body" id="questions" style="display: grid; gap: 18px;"></div>
+</section>
+</main>
+</div>
+</div>
+
+<script src="../js/bg-3d.js"></script>
+<script type="module" src="../js/teacher.js"></script>
+<script type="module" src="../js/question-import.js"></script>
+</body>
+</html>
